@@ -69,18 +69,33 @@
             <!-- Lado Derecho: Formulario Corregido -->
             <div class="contacto-formulario">
                 <!-- Se añadió event.preventDefault() para que no colapse ni reinicie la página -->
-                <form onsubmit="event.preventDefault(); alert('¡Mensaje enviado con éxito! Me pondré en contacto contigo muy pronto.'); this.reset();">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Tu Nombre o Marca" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" class="form-control" placeholder="Tu Correo Electrónico" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea rows="6" class="form-control" placeholder="Cuéntame sobre el tipo de edición que necesitas..." required></textarea>
-                    </div>
-                    <button type="submit" class="btn-glow" style="width: 100%;">Enviar Mensaje</button>
-                </form>
+                <!-- Formulario conectado a tu correo real -->
+    <form action="https://api.web3forms.com/submit" method="POST">
+
+    <!-- REEMPLAZA ESTO: Pon aquí la clave que te dé Web3Forms -->
+    <input type="hidden" name="access_key" value="97c3e741-0c5d-4dba-90ae-2fc8c4934719">
+
+    <div class="form-group" >
+        
+    </div>
+    <div class="form-group">
+        <input name="TE ESTAN CONTACTANDO KIETO ABRE TU CORREO" type="text" name="nombre" class="form-control" placeholder="Tu Nombre o Marca" required>
+    </div>
+    <div class="form-group">
+        <input type="email" name="correo" class="form-control" placeholder="Tu Correo Electrónico" required>
+    </div>
+     <div class="form-group">
+        <input type="text" name="Usuario" class="form-control" placeholder="Discord / Twitter" required>
+    </div>
+    <div class="form-group">
+        <textarea name="mensaje" rows="6" class="form-control" placeholder="Cuéntame sobre el tipo de edición que necesitas..." required></textarea>
+    </div>
+    
+    <!-- Redirección opcional después de enviar (puedes mandarlos de vuelta a index.html) -->
+    <input type="hidden" name="redirect" value="https://tuweb.com/index.html">
+
+    <button type="submit" class="btn-glow" style="width: 100%;">Enviar Mensaje</button>
+</form>
             </div>
 
         </div>
