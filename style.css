@@ -342,19 +342,22 @@ nav a.active {
     height: 100%;
     border-radius: 10px;
     width: 0;
-    transition: width 1.5s cubic-bezier(0.1, 1, 0.1, 1);
+    transition: width 1.5s cubic-bezier(0., 1, 0.1, 1);
 }
 
 .habilidad-barra-progreso.barra-pr {
     background: linear-gradient(90deg, #E8432D, #C9A84C);
+
 }
 
 .habilidad-barra-progreso.barra-ae {
     background: linear-gradient(90deg, #C9A84C, #E8432D);
+
 }
 
 .habilidad-barra-progreso.barra-ps {
     background: linear-gradient(90deg, #31A8FF, #001E36);
+
 }
 
 /* ==============================================
@@ -461,8 +464,13 @@ nav a.active {
 }
 
 @keyframes desplazarCarrusel {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(calc(-350px * 5)); }
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-350px * 5));
+    }
 }
 
 /* ==============================================
@@ -561,9 +569,15 @@ nav a.active {
 
 .portfolio-grid-small {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 24px;
     margin-bottom: 60px;
+}
+
+@media (max-width: 600px) {
+    .portfolio-grid-small {
+        grid-template-columns: 1fr;
+    }
 }
 
 .video-card {
@@ -573,6 +587,7 @@ nav a.active {
     overflow: hidden;
     transition: var(--transicion);
     box-shadow: var(--sombra-suave);
+    cursor: pointer;
 }
 
 .video-card:hover {
@@ -589,11 +604,13 @@ nav a.active {
     position: relative;
 }
 
-.video-thumbnail img {
+.video-thumbnail img,
+.video-thumbnail iframe {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: var(--transicion);
+    border: none;
+    display: block;
 }
 
 .video-info {
@@ -628,7 +645,6 @@ nav a.active {
 
 .short-card {
     width: 100%;
-    aspect-ratio: 9/16;
     background-color: var(--fondo-tarjeta);
     border-radius: var(--radio-grande);
     overflow: hidden;
@@ -636,41 +652,27 @@ nav a.active {
     box-shadow: var(--sombra-suave);
     border: 1px solid var(--borde-sutil);
     transition: var(--transicion);
+    cursor: pointer;
 }
 
-.short-card img {
+.short-thumbnail {
+    width: 100%;
+    aspect-ratio: 9/16;
+    overflow: hidden;
+    position: relative;
+    background-color: var(--fondo-tarjeta-alt);
+}
+
+.short-thumbnail iframe {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    transition: var(--transicion);
+    border: none;
 }
 
 .short-card:hover {
     transform: translateY(-4px);
     box-shadow: var(--sombra-elevada);
     border-color: var(--acento-dorado);
-}
-
-.short-card:hover img {
-    transform: scale(1.04);
-    filter: brightness(0.8);
-}
-
-/* Nombre del creador en shorts */
-.nombre-short {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 20px 16px 16px;
-    background: linear-gradient(to top, rgba(26, 26, 26, 0.85), transparent);
-    z-index: 5;
-}
-
-.nombre-short span {
-    color: #FFFFFF;
-    font-weight: 600;
-    font-size: 0.95rem;
 }
 
 @media (max-width: 768px) {
@@ -707,7 +709,7 @@ nav a.active {
     transition: var(--transicion);
     pointer-events: none;
     z-index: 10;
-    text-shadow: 0 2px 12px rgba(0,0,0,0.4);
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
 }
 
 .video-thumbnail::after,
@@ -922,14 +924,14 @@ nav a.active {
     gap: 20px;
 }
 
-.footer-content > p {
+.footer-content>p {
     font-size: 1.3rem;
     font-weight: 500;
     color: #F5F0E8;
     font-family: var(--fuente-display);
 }
 
-.footer-content > p span {
+.footer-content>p span {
     color: var(--acento-rojo);
 }
 
@@ -1090,9 +1092,20 @@ nav a.active {
 }
 
 @keyframes pulsoActivo {
-    0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(232, 67, 45, 0.6); }
-    70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(232, 67, 45, 0); }
-    100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(232, 67, 45, 0); }
+    0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(232, 67, 45, 0.6);
+    }
+
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 8px rgba(232, 67, 45, 0);
+    }
+
+    100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(232, 67, 45, 0);
+    }
 }
 
 /* ==============================================
@@ -1272,8 +1285,13 @@ nav a.active {
 }
 
 @keyframes desplazarCreadores {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(calc(-50% - 12px)); }
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-50% - 12px));
+    }
 }
 
 .creator-card {
@@ -1493,6 +1511,7 @@ nav a.active {
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);

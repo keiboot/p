@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <title>Proyectos | Keitoo</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <header>
@@ -28,18 +30,30 @@
 
         <div class="filtros-container">
             <button class="btn-filtro activo" onclick="filtrarProyectos('todos')">Todos <span>(6)</span></button>
-            <button class="btn-filtro" onclick="filtrarProyectos('largo')">YouTube / Horizontal <span>(3)</span></button>
+            <button class="btn-filtro" onclick="filtrarProyectos('largo')">YouTube / Horizontal
+                <span>(3)</span></button>
             <button class="btn-filtro" onclick="filtrarProyectos('corto')">Shorts / Reels <span>(3)</span></button>
         </div>
 
         <div id="seccion-largos" class="seccion-proyectos">
             <h3>Videos Horizontales</h3>
             <div class="portfolio-grid-small">
-                
+
+                <div class="video-card" data-video="oam78eMOdoPlO_M7" data-tipo="largo" onclick="abrirModal(this)">
+                    <div class="video-thumbnail">
+                        <iframe src="https://www.youtube.com/embed/6uxuFS2QNzw?si=oam78eMOdoPlO_M7" title="Campaña Comercial" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <div class="click-overlay"></div>
+                    </div>
+                    <div class="video-info">
+                        <h3>Campaña Comercial</h3>
+                        <p>Montaje dinámico y etalonaje.</p>
+                    </div>
+                </div>
+
                 <div class="video-card" data-video="9bZkp7q19f0" data-tipo="largo" onclick="abrirModal(this)">
                     <div class="video-thumbnail">
-                        <img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?q=80&w=600&auto=format&fit=crop" alt="Campaña Comercial">
-                        <div class="play-icon">▶️</div>
+                        <iframe src="https://www.youtube.com/embed/9bZkp7q19f0" title="Campaña Comercial" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <div class="click-overlay"></div>
                     </div>
                     <div class="video-info">
                         <h3>Campaña Comercial</h3>
@@ -49,8 +63,8 @@
 
                 <div class="video-card" data-video="dQw4w9WgXcQ" data-tipo="largo" onclick="abrirModal(this)">
                     <div class="video-thumbnail">
-                        <img src="https://images.unsplash.com/photo-1536240478700-b869070f9279?q=80&w=600&auto=format&fit=crop" alt="Videoclip Musical">
-                        <div class="play-icon">▶️</div>
+                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Videoclip Musical" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <div class="click-overlay"></div>
                     </div>
                     <div class="video-info">
                         <h3>Videoclip Musical</h3>
@@ -60,8 +74,8 @@
 
                 <div class="video-card" data-video="SIkI-ACa-Qc" data-tipo="largo" onclick="abrirModal(this)">
                     <div class="video-thumbnail">
-                        <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=600&auto=format&fit=crop" alt="Documental Corto">
-                        <div class="play-icon">▶️</div>
+                        <iframe src="https://www.youtube.com/embed/SIkI-ACa-Qc" title="Documental Corto" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <div class="click-overlay"></div>
                     </div>
                     <div class="video-info">
                         <h3>Documental Corto</h3>
@@ -74,28 +88,37 @@
         <div id="seccion-cortos" class="seccion-proyectos">
             <h3>Reels &amp; Shorts</h3>
             <div class="shorts-grid">
-                
-                <div class="short-card" data-video="G3e-cpL7ofc" data-tipo="corto" onclick="abrirModal(this)">
-                    <img src="https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?q=80&w=400&auto=format&fit=crop" alt="Short Keitoo">
-                    <div class="play-icon">▶️</div>
-                    <div class="nombre-short">
-                        <span>Keitoo</span>
+
+                <div class="short-card" data-video="EhKbcoN8d0Q" data-tipo="corto" onclick="abrirModal(this)">
+                    <div class="short-thumbnail">
+                        <iframe src="https://www.youtube.com/embed/EhKbcoN8d0Q" title="Short Keitoo" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <div class="click-overlay"></div>
+                    </div>
+                    <div class="video-info">
+                        <h3>Keitoo</h3>
+                        <p>Short / Reel</p>
                     </div>
                 </div>
 
                 <div class="short-card" data-video="G3e-cpL7ofc" data-tipo="corto" onclick="abrirModal(this)">
-                    <img src="https://images.unsplash.com/photo-1586899028174-e7098604235b?q=80&w=400&auto=format&fit=crop" alt="Short Challenger">
-                    <div class="play-icon">▶️</div>
-                    <div class="nombre-short">
-                        <span>Challenger Performance</span>
+                    <div class="short-thumbnail">
+                        <iframe src="https://www.youtube.com/embed/G3e-cpL7ofc" title="Short Challenger" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <div class="click-overlay"></div>
+                    </div>
+                    <div class="video-info">
+                        <h3>Challenger Performance</h3>
+                        <p>Short / Reel</p>
                     </div>
                 </div>
 
                 <div class="short-card" data-video="G3e-cpL7ofc" data-tipo="corto" onclick="abrirModal(this)">
-                    <img src="https://images.unsplash.com/photo-1616469829581-73993eb86b02?q=80&w=400&auto=format&fit=crop" alt="Short Kreysi">
-                    <div class="play-icon">▶️</div>
-                    <div class="nombre-short">
-                        <span>Kreysi</span>
+                    <div class="short-thumbnail">
+                        <iframe src="https://www.youtube.com/embed/G3e-cpL7ofc" title="Short Kreysi" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <div class="click-overlay"></div>
+                    </div>
+                    <div class="video-info">
+                        <h3>Kreysi</h3>
+                        <p>Short / Reel</p>
                     </div>
                 </div>
 
@@ -112,7 +135,8 @@
                 <a href="https://x.com/keitoo__" target="_blank" title="Twitter">Twitter</a>
                 <a href="https://discord.gg/qmnj5buH" target="_blank" title="Discord">Discord</a>
             </div>
-            <p class="footer-copy">&copy; 2026 <span>Keitoo</span>. Todos los derechos reservados. | Políticas de Privacidad</p>
+            <p class="footer-copy">&copy; 2026 <span>Keitoo</span>. Todos los derechos reservados. | Políticas de
+                Privacidad</p>
         </div>
     </footer>
 
@@ -130,11 +154,11 @@
             const modal = document.getElementById('videoModal');
             const iframe = document.getElementById('iframeVideo');
             const modalContent = document.getElementById('modalContent');
-            
+
             const videoId = elemento.getAttribute('data-video');
             const tipo = elemento.getAttribute('data-tipo');
 
-            if(tipo === 'corto') {
+            if (tipo === 'corto') {
                 modalContent.classList.add('formato-vertical');
             } else {
                 modalContent.classList.remove('formato-vertical');
@@ -147,10 +171,10 @@
 
         // Cerrar modal
         function cerrarModal(event) {
-            if(event.target.id === 'videoModal' || event.target.className === 'cerrar-modal') {
+            if (event.target.id === 'videoModal' || event.target.className === 'cerrar-modal') {
                 const modal = document.getElementById('videoModal');
                 const iframe = document.getElementById('iframeVideo');
-                
+
                 modal.classList.remove('activo');
                 setTimeout(() => {
                     iframe.src = "";
@@ -168,17 +192,18 @@
             botones.forEach(btn => btn.classList.remove('activo'));
             event.target.classList.add('activo');
 
-            if(categoria === 'todos') {
+            if (categoria === 'todos') {
                 secLargos.style.display = 'block';
                 secCortos.style.display = 'block';
-            } else if(categoria === 'largo') {
+            } else if (categoria === 'largo') {
                 secLargos.style.display = 'block';
                 secCortos.style.display = 'none';
-            } else if(categoria === 'corto') {
+            } else if (categoria === 'corto') {
                 secLargos.style.display = 'none';
                 secCortos.style.display = 'block';
             }
         }
     </script>
 </body>
+
 </html>
